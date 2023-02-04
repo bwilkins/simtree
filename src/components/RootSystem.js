@@ -22,9 +22,9 @@ export const RootSystem = () => {
 
     return (
         <Container>
-            {renderRoots.map((root) => {
+            {renderRoots.map((root) => (
                 <Sprite image={root.image} position={root.position}/>
-            })}
+            ))}
         </Container>
     )
 }
