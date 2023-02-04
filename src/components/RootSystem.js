@@ -23,7 +23,7 @@ export const RootSystem = () => {
     return (
         <Container>
             {renderRoots.map((root) => {
-                <Sprite {...root}/>
+                <Sprite image={root.image} position={root.position}/>
             })}
         </Container>
     )
