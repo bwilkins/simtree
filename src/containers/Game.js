@@ -9,6 +9,8 @@ export const Game = () => (
             <Background/>
         </Container>
 
-        <Tree/>
+        <Container position={[0, 0]} width={1024} height={768}>
+            <Tree/>    
+        </Container>
     </Stage>
 )
