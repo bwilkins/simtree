@@ -22,6 +22,7 @@ function App() {
           </a>
         </p>
       </header>
+      <Game/>
     </div>
   );
 }
