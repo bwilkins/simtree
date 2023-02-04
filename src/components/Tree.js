@@ -1,6 +1,6 @@
 import { Container, Sprite } from '@pixi/react'
 
-import T1MB2LR from '../images/roots/T1MB2LR'
+import T1MB2LR from '../images/roots/T1MB2LR.png'
 
 export const Tree = () => (
     <Container>
