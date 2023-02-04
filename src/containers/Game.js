@@ -1,4 +1,4 @@
-import { Stage } from '@pixi/react'
+import { Stage, Container } from '@pixi/react'
 
 import { Background } from '../components/Background'
 import { Tree } from '../components/Tree'
