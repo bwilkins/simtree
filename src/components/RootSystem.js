@@ -17,8 +17,8 @@ const rootRoot = {
 }
 
 export const RootSystem = () => {
-    const growthRoots = useState([rootRoot])
-    const renderRoots = useState([rootRoot])
+    const [growthRoots, setGrowthRoots] = useState([rootRoot])
+    const [renderRoots, setRenderRoots] = useState([rootRoot])
 
     return (
         <Container>
