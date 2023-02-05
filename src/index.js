@@ -11,7 +11,7 @@ window.PixiApp = PixiApp
 // Create the application helper and add its render target to the page
 document.body.appendChild(PixiApp.view);
 
-await PIXI.Assets.load(['background', 'T1MB1M', 'T1MR1M', 'T1ML1M', 'T1MB2LR', 'T2LRB1M', 'L1MB1M', 'R1MB1M', 'growButton'])
+await PIXI.Assets.backgroundLoad(['background', 'T1MB1M', 'T1MR1M', 'T1ML1M', 'T1MB2LR', 'T2LRB1M', 'L1MB1M', 'R1MB1M', 'growButton'])
 
 await Game(PixiApp)
 
