@@ -1,16 +1,24 @@
 {
   "files": {
     "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.6a101506.js",
+    "main.js": "./static/js/main.fbe78c52.js",
     "static/js/496.2d1c5243.chunk.js": "./static/js/496.2d1c5243.chunk.js",
     "static/media/background.png": "./static/media/background.e1429fd50be516e0fb2d.png",
+    "static/media/T1MB2LR.png": "./static/media/T1MB2LR.a49e2e800e1600f7420c.png",
+    "static/media/T2LRB1M.png": "./static/media/T2LRB1M.b18a7d6a9d4f44bb0e75.png",
+    "static/media/T1MB1M.png": "./static/media/T1MB1M.070d9618f13b7a3f629b.png",
+    "static/media/T1MR1M.png": "./static/media/T1MR1M.fe4c4f0bfd2f4e67faa1.png",
+    "static/media/T1ML1M.png": "./static/media/T1ML1M.155b85cf74b7ef54c404.png",
+    "static/media/L1MB1M.png": "./static/media/L1MB1M.126cb92e6e6b50fa932a.png",
+    "static/media/R1MB1M.png": "./static/media/R1MB1M.840d208a53db37f7e9af.png",
     "index.html": "./index.html",
+    "static/media/button-grow.png": "./static/media/button-grow.bf7d4053f023811700cc.png",
     "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.6a101506.js.map": "./static/js/main.6a101506.js.map",
+    "main.fbe78c52.js.map": "./static/js/main.fbe78c52.js.map",
     "496.2d1c5243.chunk.js.map": "./static/js/496.2d1c5243.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.6a101506.js"
+    "static/js/main.fbe78c52.js"
   ]
 }
