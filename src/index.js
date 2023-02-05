@@ -1,11 +1,13 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { PixiApp } from './containers/PixiApp';
-import './containers/Game'
+import { Game } from './containers/Game'
 
 
 // Create the application helper and add its render target to the page
 document.body.appendChild(PixiApp.view);
+
+Game(PixiApp)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
