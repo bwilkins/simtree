@@ -1,6 +1,7 @@
 import { Container, Sprite } from "pixijs"
 
 import { Roots } from '../components/Roots'
+import { screenDimensions } from "../config/config"
 import { randomSelect } from "../randomSelect"
 
 export const rootSystemContainer = new Container()
@@ -24,7 +25,7 @@ class RootSystemClass {
         console.log("growRoots called!")
         let nextRoot;
         let nextPosition;
-        const lastRoot = prevState[prevState.length-1];
+        const lastRoot = this.#roots[this.#roots-1];
         if (lastRoot.root.canGrowLeft) {
             nextRoot = lastRoot.root.growLeft()
             nextPosition = [ lastRoot.position[0] - 64, lastRoot.position[1] ]

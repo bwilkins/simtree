@@ -1,6 +1,7 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { PixiApp } from './containers/PixiApp';
+import './containers/Game'
 
 
 // Create the application helper and add its render target to the page
