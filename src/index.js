@@ -1,8 +1,10 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import * as PIXI from 'pixijs'
 import { PixiApp } from './containers/PixiApp';
 import { Game } from './containers/Game'
 
+window.PIXI = PIXI
 
 // Create the application helper and add its render target to the page
 document.body.appendChild(PixiApp.view);

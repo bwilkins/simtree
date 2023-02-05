@@ -4,9 +4,10 @@ import { Background } from '../components/Background'
 import { Tree } from '../components/Tree'
 import { screenDimensions } from '../config/config'
 import { Menu } from './Menu'
+import { PixiApp } from './PixiApp'
 
     
-export const Game = (app) => {
+export const Game = (app = PixiApp) => {
     const gameStage = app.stage;
 
     const backgroundContainer = new Container()
