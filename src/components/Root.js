@@ -1,17 +1,20 @@
+import { Texture } from 'pixijs'
+import { randomSelect } from '../randomSelect'
+
 export class Root {
-    #image
+    #texture
     #growsLeft = []
     #growsRight = []
     #growsDown = []
     constructor({image, growsLeft = [], growsRight = [], growsDown = []}) {
-        this.#image = image
+        this.#texture = new Texture.from(image)
         this.#growsLeft = growsLeft
         this.#growsRight = growsRight
         this.#growsDown = growsDown
     }
 
-    get image() {
-        return this.#image
+    get texture() {
+        return this.#texture
     }
 
     get canGrowLeft() {
@@ -27,18 +30,18 @@ export class Root {
     }
 
     growLeft() {
-        const nextRoot = this.#growsLeft[Math.floor(Math.random() * this.#growsLeft.length)]
+        const nextRoot = randomSelect(this.#growsLeft)
         this.#growsLeft = []
         return nextRoot
     }
     growRight() {
-        const nextRoot = this.#growsRight[Math.floor(Math.random() * this.#growsRight.length)]
+        const nextRoot = randomSelect(this.#growsRight)
         this.#growsRight = []
         return nextRoot
     }
 
     growDown() {
-        const nextRoot = this.#growsDown[Math.floor(Math.random() * this.#growsDown.length)]
+        const nextRoot = randomSelect(this.#growsDown)
         this.#growsDown = []
         return nextRoot
     }

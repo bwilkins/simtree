@@ -1,7 +1,6 @@
-import { RootSystem } from './RootSystem'
+import { Container } from 'pixijs'
+import { rootSystemContainer } from './RootSystem'
 
-export const Tree = ({roots = []}) => {
-    return (
-        <RootSystem roots={roots} />
-    )
-}
+const treeContainer = new Container()
+treeContainer.addChild(rootSystemContainer)
+export const Tree = treeContainer

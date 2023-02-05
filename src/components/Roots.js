@@ -56,3 +56,13 @@ export const L1MB1M = new Root({
     growsRight: [],
     growsDown: [T1MB1M, T1MB2LR, T1MR1M, T1ML1M]
 })
+
+export const Roots = {
+    T1MB1M,
+    T1ML1M,
+    T1MR1M,
+    T1MB2LR,
+    L1MB1M,
+    R1MB1M,
+    T2LRB1M
+}

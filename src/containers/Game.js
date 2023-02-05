@@ -1,54 +1,30 @@
-import { useReducer } from 'react'
-import { Stage, Container } from '@pixi/react'
+import { Container } from 'pixijs'
+
+import { PixiApp } from './PixiApp'
 
 import { Background } from '../components/Background'
 import { Tree } from '../components/Tree'
-import { T1MB2LR } from '../components/Roots'
 import { screenDimensions } from '../config/config'
 import { Menu } from './Menu'
 
+    
+const gameStage = PixiApp.stage;
 
-const rootRoot = {
-    root: T1MB2LR,
-    position: [ screenDimensions.width/2 - 32, screenDimensions.height/2 + 32 + 2],
-}
+const backgroundContainer = new Container()
+backgroundContainer.position = [0, 0]
+backgroundContainer.weight = 1024
+backgroundContainer.height = 768
+backgroundContainer.addChild(Background)
+gameStage.addChild(backgroundContainer)
 
-export const Game = () => {
-    const [rootState, growRoots] = useReducer((prevState, action) => {
-        console.log("growRoots called!")
-        let nextRoot;
-        let nextPosition;
-        const lastRoot = prevState[prevState.length-1];
-        if (lastRoot.root.canGrowLeft) {
-            nextRoot = lastRoot.root.growLeft()
-            nextPosition = [ lastRoot.position[0] - 64, lastRoot.position[1] ]
-        } else if (lastRoot.root.canGrowRight) {
-            nextRoot = lastRoot.root.growRight()
-            nextPosition = [ lastRoot.position[0] + 64, lastRoot.position[1] ]
-        } else {
-            nextRoot = lastRoot.root.growDown()
-            nextPosition = [ lastRoot.position[0], lastRoot.position[1] + 64 ]
-        }
+const treeContainer = new Container()
+treeContainer.position = [0, 0]
+treeContainer.weight = 1024
+treeContainer.height = 768
+treeContainer.addChild(Tree)
+gameStage.addChild(treeContainer)
 
-        console.log("growRoots finished")
-        return [
-            ...prevState,
-            { root: nextRoot, position: nextPosition }
-        ]
-    }, [rootRoot])
-    return (
-        <Stage width={1024} height={768}>
-            <Container position={[0, 0]} width={1024} height={768}>
-                <Background/>
-            </Container>
-
-            <Container position={[0, 0]} width={1024} height={768}>
-                <Tree roots={rootState}/>    
-            </Container>
-
-            <Container position={[screenDimensions.width - 192, 0]}>
-                <Menu growClick={() => growRoots({})}/>
-            </Container>
-        </Stage>
-    )
-}
+const menuContainer = new Container()
+menuContainer.position = [screenDimensions.width - 192, 0]
+menuContainer.addChild(Menu)
+gameStage.addChild(menuContainer)

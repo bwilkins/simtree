@@ -1,0 +1,1 @@
+export const randomSelect = (targetArray = []) => targetArray[Math.floor(Math.random() * targetArray.length)]
