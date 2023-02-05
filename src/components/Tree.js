@@ -1,7 +1,7 @@
 import { RootSystem } from './RootSystem'
 
-export const Tree = () => {
+export const Tree = ({roots = []}) => {
     return (
-        <RootSystem />
+        <RootSystem roots={roots} />
     )
 }

@@ -1,8 +1,8 @@
 import { Container } from "@pixi/react";
 import { GrowButton } from "../components/GrowButton";
 
-export const Menu = () => (
+export const Menu = ({growClick = () => {}}) => (
     <Container>
-        <GrowButton/>
+        <GrowButton onClick={growClick} />
     </Container>
 )
