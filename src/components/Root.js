@@ -15,15 +15,15 @@ export class Root {
     }
 
     get canGrowLeft() {
-        this.#growsLeft.length > 0
+        return this.#growsLeft.length > 0
     }
 
     get canGrowRight() {
-        this.#growsRight.length > 0
+        return this.#growsRight.length > 0
     }
     
     get canGrowDown() {
-        this.#growsDown.length > 0
+        return this.#growsDown.length > 0
     }
 
     growLeft() {
