@@ -1,7 +1,7 @@
 import { Assets, Sprite } from 'pixijs'
-import '../images'
+import {background} from '../images'
 
-export const BackgroundTexture = await Assets.load('background')
-export const Background = new Sprite(BackgroundTexture)
+// export const BackgroundTexture = await Assets.load('background')
+export const Background = new Sprite(background)
 
 console.log("Background", Background);
