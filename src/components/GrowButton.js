@@ -1,10 +1,10 @@
-import { Sprite, Texture } from 'pixijs'
+import { Assets, Sprite } from 'pixijs'
 
 import { RootSystem } from './RootSystem'
 
-import GrowButton_image from '../images/button-grow.png'
+import '../images'
 
-const buttonTexture = new Texture.from(window.location.href + GrowButton_image)
+const buttonTexture = await Assets.load('growButton')
 const button = new Sprite(buttonTexture)
 button.interactive = true
 button.onclick = () => RootSystem.growRoots()

@@ -15,6 +15,7 @@ export const Game = (app) => {
     backgroundContainer.height = 768
     backgroundContainer.addChild(Background)
     gameStage.addChild(backgroundContainer)
+    console.log('background added')
 
     const treeContainer = new Container()
     treeContainer.position = [0, 0]
@@ -22,9 +23,11 @@ export const Game = (app) => {
     treeContainer.height = 768
     treeContainer.addChild(Tree)
     gameStage.addChild(treeContainer)
+    console.log('tree added')
 
     const menuContainer = new Container()
     menuContainer.position = [screenDimensions.width - 192, 0]
     menuContainer.addChild(Menu)
     gameStage.addChild(menuContainer)
+    console.log('menu added')
 }

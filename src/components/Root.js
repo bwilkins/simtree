@@ -1,4 +1,3 @@
-import { Texture } from 'pixijs'
 import { randomSelect } from '../randomSelect'
 
 export class Root {
@@ -6,8 +5,8 @@ export class Root {
     #growsLeft = []
     #growsRight = []
     #growsDown = []
-    constructor({image, growsLeft = [], growsRight = [], growsDown = []}) {
-        this.#texture = new Texture.from(window.location.href + image)
+    constructor({texture, growsLeft = [], growsRight = [], growsDown = []}) {
+        this.#texture = texture
         this.#growsLeft = growsLeft
         this.#growsRight = growsRight
         this.#growsDown = growsDown
