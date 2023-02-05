@@ -7,7 +7,7 @@ export class Root {
     #growsRight = []
     #growsDown = []
     constructor({image, growsLeft = [], growsRight = [], growsDown = []}) {
-        this.#texture = new Texture.from(image)
+        this.#texture = new Texture.from(window.location.href + image)
         this.#growsLeft = growsLeft
         this.#growsRight = growsRight
         this.#growsDown = growsDown

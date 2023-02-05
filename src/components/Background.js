@@ -3,7 +3,7 @@ import { screenDimensions } from '../config/config'
 
 import background from '../images/background.png'
 
-export const BackgroundTexture = Texture.from(background)
+export const BackgroundTexture = Texture.from(window.location.href + background)
 export const Background = new Sprite(BackgroundTexture)
 Background.position = [0, 0]
 Background.width = screenDimensions.width
