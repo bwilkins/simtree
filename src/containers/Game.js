@@ -15,6 +15,7 @@ const rootRoot = {
 
 export const Game = () => {
     const [rootState, growRoots] = useReducer((prevState, action) => {
+        console.log("growRoots called!")
         let nextRoot;
         let nextPosition;
         const lastRoot = prevState[prevState.length-1];
@@ -28,6 +29,8 @@ export const Game = () => {
             nextRoot = lastRoot.root.growDown()
             nextPosition = [ lastRoot.position[0], lastRoot.position[1] + 64 ]
         }
+
+        console.log("growRoots finished")
         return [
             ...prevState,
             { root: nextRoot, position: nextPosition }
