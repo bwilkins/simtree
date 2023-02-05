@@ -15,7 +15,7 @@ export const Game = async (app = PixiApp) => {
     const backgroundContainer = new Container()
     gameStage.addChild(backgroundContainer)
     backgroundContainer.position = [0, 0]
-    backgroundContainer.weight = 1024
+    backgroundContainer.width = 1024
     backgroundContainer.height = 768
     backgroundContainer.addChild(Background)
     console.log('background added')
@@ -23,7 +23,7 @@ export const Game = async (app = PixiApp) => {
     const treeContainer = new Container()
     gameStage.addChild(treeContainer)
     treeContainer.position = [0, 0]
-    treeContainer.weight = 1024
+    treeContainer.width = 1024
     treeContainer.height = 768
     treeContainer.addChild(Tree)
     console.log('tree added')
@@ -31,6 +31,8 @@ export const Game = async (app = PixiApp) => {
     const menuContainer = new Container()
     gameStage.addChild(menuContainer)
     menuContainer.position = [screenDimensions.width - 192, 0]
+    menuContainer.width = 192
+    menuContainer.height = 32
     menuContainer.addChild(Menu)
     console.log('menu added')
 }
