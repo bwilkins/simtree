@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Container, Sprite } from "@pixi/react"
 
-import T1MB2LR from '../images/roots/T1MB2LR.png'
-import T1MB1M from '../images/roots/T1MB1M.png'
-import T1MR1M from '../images/roots/T1MR1M.png'
+import { screenDimensions } from '../config/config'
+
 
 const availableRoots = [
     T1MB2LR,
@@ -13,7 +12,7 @@ const availableRoots = [
 
 const rootRoot = {
     image: T1MB2LR,
-    position: [ 1024/2 - 32, 768/2 + 32 + 1],
+    position: [ screenDimensions.width/2 - 32, screenDimensions.height/2 + 32 + 2],
 }
 
 export const RootSystem = () => {
