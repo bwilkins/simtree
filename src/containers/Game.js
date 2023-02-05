@@ -44,7 +44,7 @@ export const Game = () => {
             </Container>
 
             <Container position={[screenDimensions.width - 192, 0]}>
-                <Menu growClick={growRoots}/>
+                <Menu growClick={() => growRoots({})}/>
             </Container>
         </Stage>
     )
