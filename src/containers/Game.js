@@ -14,7 +14,25 @@ const rootRoot = {
 }
 
 export const Game = () => {
-    const [rootState, growRoots] = useReducer(() => {}, [rootRoot])
+    const [rootState, growRoots] = useReducer((prevState, action) => {
+        let nextRoot;
+        let nextPosition;
+        const lastRoot = prevState[prevState.length-1];
+        if (lastRoot.root.canGrowLeft) {
+            nextRoot = lastRoot.root.growLeft()
+            nextPosition = [ lastRoot.position[0] - 64, lastRoot.position[1] ]
+        } else if (lastRoot.root.canGrowRight) {
+            nextRoot = lastRoot.root.growRight()
+            nextPosition = [ lastRoot.position[0] + 64, lastRoot.position[1] ]
+        } else {
+            nextRoot = lastRoot.root.growDown()
+            nextPosition = [ lastRoot.position[0], lastRoot.position[1] + 64 ]
+        }
+        return [
+            ...prevState,
+            { root: nextRoot, position: nextPosition }
+        ]
+    }, [rootRoot])
     return (
         <Stage width={1024} height={768}>
             <Container position={[0, 0]} width={1024} height={768}>
