@@ -5,6 +5,7 @@ import { PixiApp } from './containers/PixiApp';
 import { Game } from './containers/Game'
 
 window.PIXI = PIXI
+window.PixiApp = PixiApp
 
 // Create the application helper and add its render target to the page
 document.body.appendChild(PixiApp.view);
